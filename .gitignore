@@ -1,0 +1,37 @@
+# Node modules
+server/node_modules/
+client/node_modules/
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+logs/*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Cache & Build
+dist/
+build/
+.cache/
+.tmp/
+
+# Ignore client folder for now
+client/
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.swp
