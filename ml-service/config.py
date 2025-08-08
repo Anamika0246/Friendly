@@ -1,0 +1,8 @@
+# config.py
+import os
+
+# It's recommended to use environment variables for security
+TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY", "tgp_v1_bvYdc4ssJ-D80PmRjdo7SHJWwuakUipyeKNocBPsAIA")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "pcsk_6Vg9nw_44j2aoVD6y22ri12qLXeDNTRFKtUxdrCDLcmoHJKdvE9vyCjjqig3MrrH5ny1Xi")
+
+PINECONE_INDEX_NAME = "Friendly-App"

@@ -36,3 +36,6 @@ client/
 .vscode/
 .idea/
 *.swp
+
+#qodo ignore
+.qodo/
