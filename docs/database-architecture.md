@@ -141,7 +141,7 @@ This document explains the data model and how MongoDB (source of truth), Pinecon
 ---
 
 ## Pinecone (vector search)
-- Index name: `Friendly-App`
+- Index name: `friendly-app` (lowercase per Pinecone naming rules)
 - Dimension: `1024` (BAAI/bge-large-en-v1.5)
 - Metric: `cosine`
 - Namespace: optional per environment (e.g., `prod`, `staging`)

@@ -1,6 +1,6 @@
 # pinecone_service.py
 from pinecone import Pinecone, ServerlessSpec
-from .config import PINECONE_API_KEY, PINECONE_INDEX_NAME
+from .config import PINECONE_API_KEY, PINECONE_INDEX_NAME, PINECONE_CLOUD, PINECONE_REGION
 
 def init_pinecone():
     """
@@ -12,13 +12,13 @@ def init_pinecone():
     if PINECONE_INDEX_NAME not in pc.list_indexes().names():
         # Adjust dimension based on the embedding model
         pc.create_index(
-            name=PINECONE_INDEX_NAME, 
-            dimension=1024, 
+            name=PINECONE_INDEX_NAME,
+            dimension=1024,
             metric="cosine",
             spec=ServerlessSpec(
-                cloud='aws', 
-                region='us-west-2'
-            ) 
+                cloud=PINECONE_CLOUD,
+                region=PINECONE_REGION,
+            ),
         )
         
     return pc.Index(PINECONE_INDEX_NAME)
