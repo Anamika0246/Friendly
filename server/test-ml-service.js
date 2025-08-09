@@ -1,15 +1,16 @@
 // Simple driver to test ml-service embedding + Pinecone upsert
 // Usage: node server/test-ml-service.js [--user u_123] [--story s_456] [--text "your story..."]
 
-const { spawn } = require('child_process');
-const path = require('path');
+import { spawn } from 'child_process';
+import path from 'path';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load .env from repo root
-try {
-  require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
-} catch (_) {
-  // dotenv not installed; proceed with process.env as-is
-}
+dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
 // Parse CLI args (very minimal)
 const args = process.argv.slice(2);
