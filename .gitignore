@@ -30,8 +30,6 @@ build/
 .cache/
 .tmp/
 
-# Ignore client folder for now
-client/
 
 # IDE & Editor settings
 .vscode/
